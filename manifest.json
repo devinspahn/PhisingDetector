@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Email Phishing Detector",
+  "version": "1.0",
+  "description": "Uses OpenAI to identify potential phishing emails.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://mail.google.com/*",
+    "https://outlook.live.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mail.google.com/*",
+        "https://outlook.live.com/*"
+      ],
+      "js": [ "content.js" ]
+    }
+  ]
+}
