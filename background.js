@@ -1,4 +1,4 @@
-const apiKey = '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';
+const apiKey = 'REDACTED';
 const endpoint = 'https://api.openai.com/v1/chat/completions';
 
 console.log("Background script loaded.");
@@ -72,3 +72,4 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         sendResponse({ error: "Unknown action" });
     }
 });
+
